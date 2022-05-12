@@ -40,7 +40,9 @@ Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
     })->name('dashboard');
     Route::get('/plan', ['App\Http\Controllers\PlanController', 'adminView'])->name('admin-plans');
     Route::post('/plan', ['App\Http\Controllers\PlanController', 'create'])->name('admin-create-plans');
+    Route::get('/plan-make', ['App\Http\Controllers\PlanController', 'planMake'])->name('admin-make-plan');
     Route::post('/plan/delete', ['App\Http\Controllers\PlanController', 'delete'])->name('admin-delete-plans');
+    Route::post('/makePlan', ['App\Http\Controllers\PlanController', 'planMakeCreate']);
 
 });
 

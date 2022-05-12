@@ -102,4 +102,15 @@ class PlanController extends Controller
             return redirect()->back()->with(['plans' => Plan::all()]);
         }
     }
+
+    public function planMake()
+    {
+        return view('admin.plan-make');
+    }
+
+
+    public function planMakeCreate(Request $request)
+    {
+
+    }
 }
